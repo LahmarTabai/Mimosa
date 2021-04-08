@@ -1,0 +1,86 @@
+/*reset css*/
+
+html{
+    font-size: 62.5%;
+    background: #000 url(../asset/juliette.jpg)no-repeat fixed center center / cover;
+}
+body{
+    font: 1.6rem sans-serif;
+    margin: 0;
+}
+h1,h2,h3,ul,p{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-weight: normal;
+}
+*{
+    box-sizing: border-box;
+}
+
+/*theme*/
+
+:root{
+    --color-default:#222;
+    --color-warning:hsl(315, 90%, 51%);
+    --color-font-header:#fff;
+
+}
+
+header h1{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1; /* pour que sa passe en dessu superposition*/
+    line-height: 6.5rem;
+    background-color: var(--color-warning);
+    color: var(--color-font-header);
+    text-align: center;
+    margin-bottom: 6.5rem;
+    width: 100%; /* h1 display block, on fait 100% pour qu'il occupe toute la largeur aprés la popiété du positionnement qui modifit  */
+}
+header h1 .material-icons{
+    font-size: 3rem;
+    vertical-align: -.3rem;
+}
+main, footer{
+    max-width: 100rem;
+    margin: 7rem auto 0;
+}
+footer{
+    margin-top: 1rem;
+}
+footer p, footer details summary{
+    padding: .5rem;
+    text-align: center;
+    color: #fff;
+}
+footer p{
+    color: black;
+}
+main > ul li img{ /* les images sont d display inline c'est pour ca qu'il les considère comme du texte: donc on fait sa pour enlever l'interlignage par defaut (l'espace entre les images)*/
+    display: block;
+    width: 100%;
+}
+main > ul{ /*pour faire la grille*/
+    margin-top: 5rem;
+    background-color: #fff;
+    overflow: hidden; /* un masque qui lui permet de ne pas deranger (flotter) les elements qui sont à l'exterieur de lui*/
+    padding: 1rem 0 0 1rem;/*haut-droite-bas-gauceh*/
+    box-shadow: 0 0 1rem var(--color-default);
+    border-radius: 1rem;
+
+}
+
+main ul li{
+    width: calc(100% / 4 - 1rem); /**/
+    float:left;   /* mettre les images sous la meme ligne*/
+    margin: 0 1rem 1rem 0;/*haut-droite-bas-gauche  */
+
+
+}
+
+main ul li:last-child{
+    width: calc(100% - 1rem);
+
+}
