@@ -55,9 +55,7 @@ footer p, footer details summary{
     text-align: center;
     color: #fff;
 }
-footer p{
-    color: black;
-}
+
 main > ul li img{ /* les images sont d display inline c'est pour ca qu'il les considère comme du texte: donc on fait sa pour enlever l'interlignage par defaut (l'espace entre les images)*/
     display: block;
     width: 100%;
